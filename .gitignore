@@ -7,9 +7,12 @@
 
 # testing
 /coverage
+/src/tests
 
 # production
 /build
+src/firebase
+src/cloudinary
 
 # misc
 .DS_Store
