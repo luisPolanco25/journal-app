@@ -105,3 +105,27 @@
 .journal__entry-date-box span {
     font-size: 12px
 }
+
+@media (max-width:645px) {
+    .journal__sidebar {
+        width: 100%;
+    }
+
+    .journal__entries {
+        padding: 15px;
+    }
+
+    .journal__entry-title {
+        font-size: 16px;
+    }
+    
+    .journal__entry-content {
+        font-size: 12.5px;
+        margin-top: 5px;
+    }
+    
+
+    .journal__entry-date-box span {
+        font-size: 13px
+    }
+}

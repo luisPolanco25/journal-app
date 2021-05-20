@@ -47,3 +47,29 @@
     box-shadow: 5px 5px $dark-grey;
     height: 150px;
 }
+
+
+@media (max-width: 645px) {
+    main {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .notes__appbar span {
+        font-size: 14.5px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 350px) {
+    .notes__appbar span {
+        font-size: 12px;
+    }
+
+    .btn {
+        font-size: 11.5px;
+    }
+}

@@ -14,10 +14,17 @@ export const startNewNote = () => {
             date: new Date().getTime()
         }
 
-        const documentReference = await db.collection(`${uid}/journal/notes`).add(newNote);
+        try {
 
-        dispatch(activeNote(documentReference.id, newNote));    
-        dispatch(addNewNote(documentReference.id, newNote))    
+            const documentReference = await db.collection(`${uid}/journal/notes`).add(newNote);
+    
+            dispatch(activeNote(documentReference.id, newNote));    
+            dispatch(addNewNote(documentReference.id, newNote));    
+            
+        } catch (error) {
+            console.log(error);
+        }
+
     }
 }
 

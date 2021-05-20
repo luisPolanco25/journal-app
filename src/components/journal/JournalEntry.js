@@ -1,21 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import moment from 'moment';
 import { useDispatch } from 'react-redux';
 import { activeNote } from '../actions/notes';
+import { MobileScreenContext } from '../../context/MobileScreenContext';
 
 export const JournalEntry = ({id, date, title, body, url}) => {
     
     const noteDate = moment(date);
     const dispatch = useDispatch();
+    const {screenWidth, setActivateMobileStyles} = useContext(MobileScreenContext);
 
     const handleEntryClick = () => {
-        dispatch(activeNote(id, {date, title, body, url}))
+        dispatch(activeNote(id, {date, title, body, url}));
+
+        if (screenWidth <= 645) {
+            setActivateMobileStyles(false);
+        }
     }
     
     return (
         <div 
             className="journal__entry pointer animate__animated animate__backInRight"
             onClick={handleEntryClick}
+            tabIndex="1"
         >
 
             {

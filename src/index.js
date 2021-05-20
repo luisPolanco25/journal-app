@@ -8,3 +8,4 @@ ReactDOM.render(
   <JournalApp />,
   document.getElementById('root')
 );
+

@@ -6,21 +6,35 @@
 
 #_box {
     position: absolute;
-    top: 50vh;
-    left: 50vw;
+    width: 128px;
+    height: 127px;
+    top: 50%;
+    left: 50%;
+    margin-top: calc(-127px / 2);
+    margin-left: calc(-128px / 2);
 }
 
 #_loading-text {
     color: darken($color: $primary, $amount: 20);
-    margin-left: -23px;
+    position: absolute;
+    width: 128px;
+    height: 37px;
+    top: 50%;
+    left: 50%;
+    margin-top: 50px;
+    margin-left: -64px;
 }
 
 #_loading {
     display: block;
-    position: relative;
+    position: absolute;
     width: 80px;
     height: 80px;
-    margin-bottom: 10px;
+    top: 50%;
+    left: 50%;
+    margin-top: -40px;
+    margin-left: -40px;
+
 }
 
 #_loading div {

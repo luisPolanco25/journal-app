@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { MobileScreenContext } from '../../context/MobileScreenContext';
 import { useForm } from '../../hooks/useForm';
 import { activeNote, startDeleting } from '../actions/notes';
 import { NotesAppBar } from './NotesAppBar';
@@ -14,6 +15,8 @@ export const NoteScreen = () => {
     const {body, title, id} = formValues;
 
     const activeId = useRef(note.id)
+
+    const {screenWidth, setActivateMobileStyles} = useContext(MobileScreenContext);
 
     useEffect(() => {
 
@@ -32,6 +35,10 @@ export const NoteScreen = () => {
 
     const handleDelete = () => {
         dispatch(startDeleting(id));
+
+        if (screenWidth <= 645) {
+            setActivateMobileStyles(true);
+        }
     }
     
     
