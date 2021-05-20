@@ -4,3 +4,4 @@ This is an app made with `Redux`, `React.js` and `Firebase`. It also uses some p
 
 ## Live preview 
 
+https://luispolanco25.github.io/journal-app/
