@@ -46,7 +46,7 @@ export const AppRouter = () => {
     }
     
     return (
-        <Router>
+        <Router basename={window.location.pathname || ''}>
             <div>
                 <Switch>
                     <PublicRoute
