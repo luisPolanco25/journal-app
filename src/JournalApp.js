@@ -17,7 +17,7 @@ export const JournalApp = () => {
         
         return () => window.removeEventListener("resize", updateWidth);
     }, [])
-        console.log(activateMobileStyles);
+    
     return (
         <Provider store={ store }>
             <MobileScreenContext.Provider value={{screenWidth, activateMobileStyles, setActivateMobileStyles}}>
