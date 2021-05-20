@@ -17,8 +17,7 @@
     flex-grow: 1;
     display: grid;
     grid-template-rows: 100%;
-    grid-template-columns: 3% 97%;
-    column-gap: 5%;
+    grid-template-columns: 100%;
     align-items: center;
 }
 
@@ -68,6 +67,11 @@
     main {
         width: 100%;
         height: 100vh;
+    }
+
+    .notes__appbar div:first-child {
+        grid-template-columns: 3% 97%;
+        column-gap: 5%;
     }
 
     .notes__appbar div:first-child i {
