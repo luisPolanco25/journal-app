@@ -12,6 +12,8 @@
 # production
 /build
 src/cloudinary
+src/firebase
+
 
 # misc
 .DS_Store
